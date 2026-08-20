@@ -1,0 +1,7 @@
+paiva = int(input("\nKuinka monta päivää: "))
+tunti = (paiva * 24)
+minuutt = (tunti * 60)
+sekunt = (minuutt * 60)
+print("Annettu määrä päiviä tunteina: ", tunti)
+print("Annettu määrä päiviä minuutteina: ", minuutt)
+print("Annettu määrä päiviä sekunteina: ", sekunt, "\n")

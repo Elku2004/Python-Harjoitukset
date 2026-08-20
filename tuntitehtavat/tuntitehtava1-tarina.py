@@ -1,0 +1,8 @@
+nimi = input("Anna nimi: ")
+adjektiivi = input("Anna adjektiivi: ")
+adjektiivikaks = input("Anna toinen adjektiivi: ")
+print("\n\n")
+print(f"{nimi} on nyt Suomen presidentti. Hänen hallintonsa on {adjektiivi} ja {adjektiivikaks}")
+print(f"Hänellä oli kilpailija, joka oli myös {adjektiivikaks}, muttei {adjektiivi}.")
+print(f"{nimi} äänestettiin pois")
+print("\n\n")
