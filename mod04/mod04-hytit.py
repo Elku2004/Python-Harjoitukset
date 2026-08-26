@@ -1,6 +1,5 @@
 hytti = input("\nAnna hyttiluokkasi (LUX, A, B, C): ")
-hytti = hytti.upper
-print(hytti)
+hytti = hytti.upper()
 if hytti == "LUX":
     print(f"LUX on parvekkeellinen hytti yläkannella.")
 elif hytti == "A":
