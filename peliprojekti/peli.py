@@ -14,10 +14,12 @@ while True:
     elif valinta == "noppa":
         kerta = int(input("Kuinka monta kertaa noppaa heitetään: "))
         heitto = 0
+        arvot = []
         while heitto < kerta:
-            print(f"{rnd.randint(1,6)}")
+            vast = rnd.randint(1,6)
+            arvot.append(vast)
             heitto = heitto + 1
-        print("Ole hyvä!")
+        print(f"{arvot}\nOle hyvä!")
     elif valinta == "ika":
         print(f"Unohditko oman ikäsi? Sinun ikäsi on {ika}")
     elif valinta == "lopeta":
