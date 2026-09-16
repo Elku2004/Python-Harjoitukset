@@ -1,7 +1,9 @@
 import math
-def yksikkohinta (halk=1, hinta=1):
-    vast = hinta/(halk/200*math.pi)
-    return vast
+def yksikkohinta (halk, hinta):
+    sade = (halk / 2) / 100
+    alue = sade**2 * math.pi
+    ratkaisu = hinta / alue
+    return ratkaisu
 
 pizzat = []
 for i in range (2):
@@ -14,7 +16,7 @@ print(f"\nPizza 1. {pizzat[0]:.3f}€/m^2\nPizza 2. {pizzat[1]:.3f}€/m^2\n")
 if pizzat[0] == pizzat[1]:
     print("Pizzat antavat yhtä hyvän vastineen rahallenne.")
 elif pizzat[0] > pizzat[1]:
-    print("Pizza 1 antaa paremman vastineen.")
-else:
     print("Pizza 2 antaa paremman vastineen.")
+else:
+    print("Pizza 1 antaa paremman vastineen.")
 
