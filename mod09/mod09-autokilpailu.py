@@ -11,7 +11,6 @@ class Auto:
         if self.nyt_nopeus + muutos <= 0:
             self.nyt_nopeus = 0
         elif self.nyt_nopeus + muutos >= self.huippunopeus:
-            print("Huippunopeus!")
             self.nyt_nopeus = self.huippunopeus
         else:
             self.nyt_nopeus += muutos
@@ -35,10 +34,19 @@ for i in range(10):
 #time.sleep(0.5)
 #print("GO!")
 #time.sleep(0.5)
-o = 0
-for i in autot:
-    o += 1
-    print(autot[f"Auto {o}"])
-    autot[f"Auto {o}"].kiihdyta(random.randint(10,15))
-    print(autot[f"Auto {o}"].nyt_nopeus)
 
+end = False
+while True:
+    for i in range(10):
+        autot[f"Auto {i+1}"].kiihdyta(random.randint(10,15))
+        #print(autot[f"Auto {o}"])
+        #print(autot[f"Auto {o}"].nyt_nopeus
+        autot[f"Auto {i+1}"].kulje(1)
+    for i in range(10):
+        if autot[f"Auto {i+1}"].matka >= 10000:
+            end = True
+    if end == True:
+        break
+
+for i in autot:
+    print(f"{i} - Rekisteritunnus: {autot[i].rekisteritunnus} Huippunopeus: {autot[i].huippunopeus} Matka: {autot[i].matka}")
