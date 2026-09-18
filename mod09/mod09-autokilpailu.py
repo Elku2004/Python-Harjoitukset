@@ -23,29 +23,28 @@ class Auto:
 autot = {}
 for i in range(10):
     autot[f"Auto {i+1}"] = Auto(f"ABC-{i+1}", random.randint(100,200))
-#for i in autot:
-#    print(f"{i}\n{autot[i]}\n{autot[i].rekisteritunnus}\n{autot[i].huippunopeus}")
 
-#print("3")
-#time.sleep(0.5)
-#print("2")
-#time.sleep(0.5)
-#print("1")
-#time.sleep(0.5)
-#print("GO!")
-#time.sleep(0.5)
+print("3")
+time.sleep(0.5)
+print("2")
+time.sleep(0.5)
+print("1")
+time.sleep(0.5)
+print("GO!")
+time.sleep(0.5)
 
 end = False
 while True:
     for i in range(10):
         autot[f"Auto {i+1}"].kiihdyta(random.randint(10,15))
-        #print(autot[f"Auto {o}"])
-        #print(autot[f"Auto {o}"].nyt_nopeus
         autot[f"Auto {i+1}"].kulje(1)
+
     for i in range(10):
         if autot[f"Auto {i+1}"].matka >= 10000:
             end = True
     if end == True:
+        print("Kisa seis!")
+        time.sleep(1)
         break
 
 for i in autot:
