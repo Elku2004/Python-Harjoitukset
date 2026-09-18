@@ -49,4 +49,4 @@ while True:
         break
 
 for i in autot:
-    print(f"{i} - Rekisteritunnus: {autot[i].rekisteritunnus} Huippunopeus: {autot[i].huippunopeus} Matka: {autot[i].matka}")
+    print(f"{i} - Rekisteritunnus: {autot[i].rekisteritunnus} Nopeus: {autot[i].nyt_nopeus} Huippunopeus: {autot[i].huippunopeus} Matka: {autot[i].matka}")
