@@ -12,6 +12,7 @@ Siirrä se sille luokalle, jossa se on sinusta looginen.
 Testaa, että peli toimii järkevästi.
 '''
 from random import randint
+from time import sleep
 
 class Hahmo:
     def __init__(self, nimi):
@@ -65,7 +66,10 @@ class Hirvio(Hahmo):
 def valittu_esine(esine):
     if esine == "pommi":
         if pelaajahahmo.no_pommi != 0:
-            print("Selviät tällä kertaa!")
+            print("Selviät tällä kertaa!"
+                  "What doesn't kill you, makes you stronger -Joku todella älykäs"
+                  "+30hp")
+            pelaajahahmo.hp += 30
             pelaajahahmo.no_pommi -= 1
         else:
             print("Räjähdit")
@@ -86,9 +90,9 @@ def valittu_esine(esine):
     elif esine == "ranskalaiset korkokengät":
         print("Mahtavat korkokengät!")
         pelaajahahmo.tavaralista.append("Ranskalaiset Korkokengät")
-        
     elif esine == "rasia":
         print("Ja rasiasta saat...")
+        sleep(1)
         a = randint(1,3)
         if a == 1:
             print("Pommi!")
