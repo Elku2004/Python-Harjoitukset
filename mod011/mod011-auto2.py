@@ -54,8 +54,3 @@ print(f"Auton {auto_1.rekisteritunnus} tiedot:\nHuippunopeus: {auto_1.huippunope
       f"Kuljettu matka: {auto_1.matka}\n")
 print(f"Auton {auto_2.rekisteritunnus} tiedot:\nHuippunopeus: {auto_2.huippunopeus}\nBensatankin koko: {auto_2.bensatankki}"
       f"\nKuljettu matka: {auto_2.matka}")
-#print(f"Tämänhetkinen nopeus: {auto1.nyt_nopeus}")
-#auto1.kulje(1.5)
-#auto1.kiihdyta(-200)
-#print(f"Tämänhetkinen nopeus: {auto1.nyt_nopeus}")
-#print(f"Auton kuljettu matka {auto1.matka}")
