@@ -39,7 +39,7 @@ class Pelaaja(Hahmo):
         
     def taistelu(self, vastustaja):
         print("Tulee suuri taistelu.")
-        vastustaja.hp = randint(50, 100) + loop * 5
+        vastustaja.hp = randint(50, 100) + 2 ** loop
         vastustaja.tulosta_tiedot()
         input()
     
@@ -66,9 +66,9 @@ class Hirvio(Hahmo):
 def valittu_esine(esine):
     if esine == "pommi":
         if pelaajahahmo.no_pommi != 0:
-            print("Selviät tällä kertaa!"
-                  "What doesn't kill you, makes you stronger -Joku todella älykäs"
-                  "+30hp")
+            print(f"Selviät tällä kertaa!"
+                  f"\nWhat doesn't kill you, makes you stronger -Joku todella älykäs"
+                  f"\n30hp")
             pelaajahahmo.hp += 30
             pelaajahahmo.no_pommi -= 1
         else:
@@ -86,7 +86,7 @@ def valittu_esine(esine):
         pelaajahahmo.hp += 10
     elif esine == "turhautus":
         print("No nyt turhauttaa!")
-        pelaajahahmo.tavaralista.append("Vitutus")
+        pelaajahahmo.tavaralista.append("Turhautus")
     elif esine == "ranskalaiset korkokengät":
         print("Mahtavat korkokengät!")
         pelaajahahmo.tavaralista.append("Ranskalaiset Korkokengät")
@@ -97,7 +97,10 @@ def valittu_esine(esine):
         if a == 1:
             print("Pommi!")
             if pelaajahahmo.no_pommi != 0:
-                print("Selviät tällä kertaa!")
+                print(f"Selviät tällä kertaa!"
+                      f"\nWhat doesn't kill you, makes you stronger -Joku todella älykäs"
+                      f"\n30hp")
+                pelaajahahmo.hp += 30
                 pelaajahahmo.no_pommi -= 1
             else: 
                 print("Räjähdit!")
@@ -149,6 +152,8 @@ input()
 loppu = "."
 while loppu != "":
     kauppa1.kauppa_tapahtuma()
+    if pelaajahahmo.hp == 0:
+        break
     loppu = pelaajahahmo.taistelu(hirviot[randint(0,2)])
     input()
     loop += 1
