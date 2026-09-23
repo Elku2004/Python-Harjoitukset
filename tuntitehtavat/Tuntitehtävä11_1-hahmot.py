@@ -34,37 +34,47 @@ class Pelaaja(Hahmo):
         
     def taistelu(self, vastustaja):
         print("Tulee suuri taistelu.")
+        vastustaja.tulosta_tiedot()
         input()
+    
         if vastustaja.hp > self.hp:
             print(f"{self.nimi} hävisi taistelun :<")
-            self.hp = 0
         else:
             print(f"{self.nimi} voitti taistelun!")
-            self.tulosta_tiedot()
+            print(f"Sait esineen: {vastustaja.esine}\n")
+            pelaajahahmo.tavaralista.append(vastustaja.esine)
+            
 
 class Hirvio(Hahmo):
-    def __init__(self, nimi, repliikki):
+    def __init__(self, nimi, repliikki, esine):
         super().__init__(nimi)
         self.repliikki = repliikki
-        self.esine = "Kypärä"
+        self.esine = esine
 
     def tulosta_tiedot(self):
         print(self.repliikki)
         super().tulosta_tiedot()
 
 
-merihirvio = Hirvio("Merihirviö", "Lits läts, aion syödä sinut!")
+merihirvio = Hirvio("Merihirviö", "Lits läts, aion syödä sinut!", "Kala")
+laavahirvio = Hirvio("Laavahirviö", "Blargh!", "Laavakivi")
+salamahirvio = Hirvio("Salamahirviö", "Zzzzpt!", "Salama purkissa")
+
 pelaajahahmo = Pelaaja(input("Anna hahmon nimi: "))
 
 print("Peli alkaa.")
 pelaajahahmo.tulosta_tiedot()
 input()
 
-merihirvio.tulosta_tiedot()
-
-
-input()
 pelaajahahmo.taistelu(merihirvio)
-print(f"Sait esineen: {merihirvio.esine}")
 input()
+
+pelaajahahmo.taistelu(laavahirvio)
+input()
+
+pelaajahahmo.taistelu(salamahirvio)
+input()
+
+pelaajahahmo.tulosta_tiedot()
+
 print(f"Peli ohi.")
