@@ -160,6 +160,7 @@ while loppu != "":
     if pelaajahahmo.hp == 0:
         break
 
+sleep(1)
 pelaajahahmo.tavaralista.sort()
 pelaajahahmo.tulosta_tiedot()
 
