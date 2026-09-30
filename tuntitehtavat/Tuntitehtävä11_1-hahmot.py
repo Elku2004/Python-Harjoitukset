@@ -65,9 +65,9 @@ def valittu_esine(esine):
             print("Turhautus")
             print("No nyt turhauttaa!")
         else:
-            print("Ei mitään!2")
+            print("Ei mitään!")
     else:
-        print("Ei mitään esinettä!1")
+        print("Ei mitään esinettä!")
     print("\n")
 
 class Kauppa:
