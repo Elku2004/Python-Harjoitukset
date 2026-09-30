@@ -13,55 +13,7 @@ Testaa, että peli toimii järkevästi.
 '''
 from random import randint
 from time import sleep
-
-class Hahmo:
-    def __init__(self, nimi):
-        self.nimi = nimi
-        self.hp = randint(50, 100)
-
-    def tulosta_tiedot(self):
-        print(f"Hahmon nimi: {self.nimi}")
-        print(f"Hahmon hp: {self.hp}")
-
-class Pelaaja(Hahmo):
-    def __init__(self, nimi):
-        super().__init__(nimi)
-        self.score = 0
-        self.no_pommi = 0
-        self.tavaralista = ["Miekka", "Kilpi"]
-
-    def tulosta_tiedot(self):
-        super().tulosta_tiedot()
-        print("Tavaralista:")
-        for i in self.tavaralista:
-            print(f"- {i}")
-        print(f"Pisteet: {self.score}")
-        
-    def taistelu(self, vastustaja):
-        print("Tulee suuri taistelu.")
-        vastustaja.hp = randint(50, 100) + 2 ** loop
-        vastustaja.tulosta_tiedot()
-        input()
-    
-        if vastustaja.hp > self.hp:
-            print(f"{self.nimi} hävisi taistelun :<")
-            return ""
-        else:
-            print(f"{self.nimi} voitti taistelun!")
-            print(f"Sait esineen: {vastustaja.esine}\n")
-            pelaajahahmo.tavaralista.append(vastustaja.esine)
-            self.score += vastustaja.hp
-            print(f"+{vastustaja.hp} pistettä")
-
-class Hirvio(Hahmo):
-    def __init__(self, nimi, repliikki, esine):
-        super().__init__(nimi)
-        self.repliikki = repliikki
-        self.esine = esine
-
-    def tulosta_tiedot(self):
-        print(self.repliikki)
-        super().tulosta_tiedot()
+from tuntitehtava12 import Hirvio, Pelaaja
 
 def valittu_esine(esine):
     if esine == "pommi":
@@ -99,7 +51,7 @@ def valittu_esine(esine):
             if pelaajahahmo.no_pommi != 0:
                 print(f"Selviät tällä kertaa!"
                       f"\nWhat doesn't kill you, makes you stronger -Joku todella älykäs"
-                      f"\n30hp")
+                      f"\n+30hp")
                 pelaajahahmo.hp += 30
                 pelaajahahmo.no_pommi -= 1
             else: 
@@ -153,13 +105,12 @@ loppu = "."
 while loppu != "":
     kauppa1.kauppa_tapahtuma()
     if pelaajahahmo.hp == 0:
-        break
-    loppu = pelaajahahmo.taistelu(hirviot[randint(0,2)])
-    input()
-    loop += 1
+            break
+    loppu = pelaajahahmo.taistelu(hirviot[randint(0,2)], loop)
     if pelaajahahmo.hp == 0:
-        break
-
+            break
+    input()    
+    loop += 1
 sleep(1)
 pelaajahahmo.tavaralista.sort()
 pelaajahahmo.tulosta_tiedot()
