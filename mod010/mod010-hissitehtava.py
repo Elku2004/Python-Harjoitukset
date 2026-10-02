@@ -1,3 +1,4 @@
+from time import sleep
 class Talo:
     def __init__ (self, ylinkrs, alinkrs, hissi_määrä):
             self.ylinkrs = ylinkrs
@@ -6,7 +7,6 @@ class Talo:
             for i in range (hissi_määrä):
                  hissit.append(Hissi(self.ylinkrs, self.alinkrs))
             self.hissit = hissit
-            print(self.hissit)
             
     def aja_hissia (self, hissi, kerros):
           self.hissit[hissi-1].siirry_kerrokseen(kerros)
@@ -34,15 +34,20 @@ class Hissi:
             while kerros !=  self.nyt_kerros:
                 self.nyt_kerros += 1
                 print(f"Kerros {self.nyt_kerros}")
+                sleep(0.5)
 
     def kerros_alas (self, kerros):
             while kerros !=  self.nyt_kerros:
                 self.nyt_kerros -= 1
                 print(f"Kerros {self.nyt_kerros}")
+                sleep(0.5)
 
 
 talo_1 = Talo(10,1,3)
 talo_1.aja_hissia(1,5)
+sleep(1)
 talo_1.aja_hissia(2,4)
+sleep(1)
 talo_1.aja_hissia(1,10)
+sleep(1)
 talo_1.palohalytys()
