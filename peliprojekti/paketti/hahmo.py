@@ -8,6 +8,9 @@ class Pelaaja(Hahmo):
         self.esineet = []
         self.sijainti = ""
         self.ika = ika
+        self.alaikainen = False
+        if self.ika < 12:
+            self.alaikainen = True
 
     def siirry(self, huone):
         self.sijainti = huone.nimi
@@ -22,10 +25,4 @@ class Pelaaja(Hahmo):
             print(f"Saat esineen: {esine.nimi}")
             self.esineet.append(esine)
             input()
-
-#class NPC(Hahmo):
-#    def __init__(self, nimi):
-#        super().__init__(nimi)
-#        self.relationship = 50
-
 

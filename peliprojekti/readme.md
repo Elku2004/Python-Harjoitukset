@@ -1,4 +1,4 @@
-# PELI NUMERO 3000
+# The Road
 #### Elias Lahtinen
 
 ### Projekti 3
@@ -12,4 +12,9 @@ peli.py on pääohjelma
 .hahmot sisältää Pelaajan, jolla on lista tavaroista, nimi ja metodeita, jotka vaihtavat huoneen sijaintia ja toteuttavat Huoneen metodin, joka tulostaa eri tekstin riippuen huoneesta
 
 Esine -luokka omistaa nimen ja painon, jonka Hahmo tulostaa pelin lopussa
+
+### Projekti 5
+ohjeet.txt ja intro.txt sijaitsevat paketti kansion sisällä. Molemmilla nimensä mukaiset toiminnot pelissä. Tiedostot sisältää tällä hetkellä vain nopeasti keksittyä tekstiä, jotka korvataan sopivammalla tekstillä kokonaisessa pelissä.
+
+
 
