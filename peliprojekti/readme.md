@@ -16,5 +16,5 @@ Esine -luokka omistaa nimen ja painon, jonka Hahmo tulostaa pelin lopussa
 ### Projekti 5
 ohjeet.txt ja intro.txt sijaitsevat paketti kansion sisällä. Molemmilla nimensä mukaiset toiminnot pelissä. Tiedostot sisältää tällä hetkellä vain nopeasti keksittyä tekstiä, jotka korvataan sopivammalla tekstillä kokonaisessa pelissä.
 
-
+Pelissä on nyt myös tallennusmekanismi, joka tallentaa Pelaaja luokan tiedostomuotoon ja kaikki esineet sen tavaralistasta. Tein itselleni lisähaasteen ja koodi antaa pelaajan tallentaa 10 eri tiedostoon jotka muodostuu nimellä save{num}. Oli hankala, mutta mukavaa tehdä. 
 
