@@ -58,7 +58,7 @@ while True:
     elif valinta == 2:
         print("Varastossasi on: ")
         for i in kayttaja.esineet:
-            print(f"- {i}")
+            print(f"- {i.nimi}")
         input()
 
     elif valinta == 3:

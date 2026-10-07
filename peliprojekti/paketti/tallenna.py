@@ -63,7 +63,7 @@ def tallenna_peli(kayttaja):
             varasto_nimet = []
             for i in kayttaja.esineet:
                 varasto_nimet.append(i.nimi)
-                varasto_tallenne[i.nimi] = i.paino
+                varasto_tallenne[i.nimi] = i.lause
             kayttaja_tiedot = {f"Nimi": kayttaja.nimi,
                                f"Varasto": varasto_tallenne,
                                f"Ika": kayttaja.ika,

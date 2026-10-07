@@ -1,1 +1,1 @@
-{"Nimi": "Alku", "Varasto": {}, "Ika": 12345, "Tavaroiden_nimet": [], "Taso": 1}
+{"Nimi": "Alku", "Varasto": {"Iso Kenk\u00e4": "Esit\u00e4t aineistossa keng\u00e4n, jonka koko voi olla pikkukyl\u00e4nne sis\u00e4ll\u00e4 vain viidell\u00e4 henkil\u00f6ll\u00e4!", "Kalamyyj\u00e4n Numero": "Kutsut kalamyyj\u00e4n todistamaan. H\u00e4n kuvailee tapahtumia parhaansa mukaan"}, "Ika": 12345, "Tavaroiden_nimet": ["Iso Kenk\u00e4", "Kalamyyj\u00e4n Numero"], "Taso": 2}
