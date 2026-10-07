@@ -3,7 +3,7 @@ class Hahmo:
         self.nimi = nimi
 
 class Pelaaja(Hahmo):
-    def __init__(self, nimi, ika):
+    def __init__(self, nimi, ika, taso):
         super().__init__(nimi)
         self.esineet = []
         self.sijainti = ""
@@ -11,6 +11,7 @@ class Pelaaja(Hahmo):
         self.alaikainen = False
         if self.ika < 12:
             self.alaikainen = True
+        self.taso = taso
 
     def siirry(self, huone):
         self.sijainti = huone.nimi
@@ -20,9 +21,14 @@ class Pelaaja(Hahmo):
         if huone.esine != "":
             self.saat_esineen(huone.esine)
 
-    def saat_esineen(self, esine):
+    def kerata(self, esine):
         if esine.nimi != "":
             print(f"Saat esineen: {esine.nimi}")
             self.esineet.append(esine)
             input()
 
+class NPC(Hahmo):
+    def __init__(self, nimi):
+        super().__init__(nimi)
+        self.tapaaminen = False
+        self.saapuu = False

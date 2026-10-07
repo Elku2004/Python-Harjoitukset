@@ -1,4 +1,4 @@
 class Esine:
-    def __init__(self, nimi, paino):
+    def __init__(self, nimi, lause):
         self.nimi = nimi
-        self.paino = paino
+        self.lause = lause
