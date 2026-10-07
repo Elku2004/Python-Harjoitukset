@@ -12,23 +12,8 @@ class Pelaaja(Hahmo):
         if self.ika < 12:
             self.alaikainen = True
         self.taso = taso
-
-    def siirry(self, huone):
-        self.sijainti = huone.nimi
-        print(f"Olet saapunut huoneeseen: {huone.nimi}")
-        input()
-        huone.tapahtuma
-        if huone.esine != "":
-            self.saat_esineen(huone.esine)
+        self.tapaaminen = 0
 
     def kerata(self, esine):
-        if esine.nimi != "":
-            print(f"Saat esineen: {esine.nimi}")
-            self.esineet.append(esine)
-            input()
-
-class NPC(Hahmo):
-    def __init__(self, nimi):
-        super().__init__(nimi)
-        self.tapaaminen = False
-        self.saapuu = False
+        print(f"Saat esineen: {esine.nimi}")
+        self.esineet.append(esine)

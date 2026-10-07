@@ -68,7 +68,8 @@ def tallenna_peli(kayttaja):
                                f"Varasto": varasto_tallenne,
                                f"Ika": kayttaja.ika,
                                f"Tavaroiden_nimet": varasto_nimet,
-                               f"Taso": kayttaja.taso}
+                               f"Taso": kayttaja.taso,
+                               f"Tapaaminen": kayttaja.tapaaminen}
             with open(f"peliprojekti/paketti/save{num}.json", "w") as save:
                 json.dump(kayttaja_tiedot, save)
             print("Tallennus onnistui!")

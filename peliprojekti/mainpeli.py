@@ -1,4 +1,4 @@
-from paketti import Pelaaja, tallenna_peli, lataa_tallenne, aloita_luonti, luo_kayttaja, Esine, taso, NPC
+from paketti import Pelaaja, tallenna_peli, lataa_tallenne, aloita_luonti, luo_kayttaja, Esine, taso
 
 import os
 import json
