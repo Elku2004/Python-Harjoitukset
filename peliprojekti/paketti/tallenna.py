@@ -25,10 +25,12 @@ def aloita_luonti():
             break
     return kayttaja
 
+#Luo "käyttäjän"
 def luo_kayttaja(nimi, ika, taso):
     kayttaja = Pelaaja(nimi, ika, taso)
     return kayttaja
 
+#Lataa aiemman tallennuksen ja kysyy ikää tarkistaakseen että on oikea. Sulkee pelin, jos vastaat väärin monta kertaa
 def lataa_tallenne(save):
     kerrat = 0
     while True:
@@ -51,7 +53,7 @@ def lataa_tallenne(save):
                 print("Kirjoitit liian monta kertaa väärin\nHei Hei!")
                 exit()
                 
-
+#Tekee tavaroista ja muista tärkeistä muuttujista tallenteen
 def tallenna_peli(kayttaja):
     while True:
         num = input("Minkä tallenuksen päälle kirjoitetaan? 1-10 (tai enter peruaksesi tallentamisen): ")

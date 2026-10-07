@@ -1,5 +1,6 @@
 from .esineet import Esine
 from .tallenna import tallenna_peli
+#Tarkistaa että syötetty arvo on numerod
 def valitse(x):
     print(f"{x}")
     while True:
@@ -8,7 +9,7 @@ def valitse(x):
             return valint
         except ValueError:
             print("Syötä numero")
-
+#Tarkistaa että syötetty arvo on oikea numero
 def valitse_alku(x, num):
     while True:
         valint = valitse(x)    
@@ -17,6 +18,7 @@ def valitse_alku(x, num):
         else:
             print("Vastasitko oikein?")
 
+#Viimeistä tasoa varten huono lopetus. Jos teet virheen 5 kertaa, peli katkeaa
 def oveen_paukutus(kiire: int):
     if kiire > 4:
         print("Kalju mies juoksee ovesta läpi kaiken paukuttamisen jälkeen ja vie sinut mukanaan\n" \
@@ -52,6 +54,7 @@ def taso_1(kayttaja):
         print("Lähestyt ääntä ja kuulet" \
         "'Uhargghhhhh'")
         print("HIRVIÖ?!")
+        input()
         valint = ""
         valint = valitse_alku("1. Karkaa\n2. Jää katsomaan", (1,2))
         if valint == 1:
@@ -206,10 +209,11 @@ def taso_3(kayttaja):
         if pisteet >= 3:
             print("Todisteittesi ansiosta, Jaakko Paakko pystytään pidättämään ja erottamaan hänen virastaan")
         elif pisteet == 2:
-            print("Jaakko Paakko saa tuomion, mutta pysyy virassaan. Täytyy toivoa että hän korjaa tapansa")
+            print("Jaakko Paakko saa tuomion, mutta pysyy virassaan. Täytyy toivoa että hän korjaa tapansa\n" \
+                  "Sinulta puuttui vielä jotain...")
         else:
             print("Todistusaineistosi ei riittäneet todistamaan mitään\n" \
-            "Unohditko tavoitteesi?"
+            "Unohditko tavoitteesi?\n"
             "Mitä olisit voinut tehdä toisin?")
         input()
         print("------The End------")

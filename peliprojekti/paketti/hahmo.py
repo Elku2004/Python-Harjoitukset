@@ -6,9 +6,9 @@ class Pelaaja(Hahmo):
     def __init__(self, nimi, ika, taso):
         super().__init__(nimi)
         self.esineet = []
-        self.sijainti = ""
         self.ika = ika
         self.alaikainen = False
+        #Jos alaikäinen, et voi pelata ollenkaan
         if self.ika < 12:
             self.alaikainen = True
         self.taso = taso

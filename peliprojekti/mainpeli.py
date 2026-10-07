@@ -13,6 +13,7 @@ for i in range(1, 11):
         else:
             on_tallenne = False
 
+#Jos tallennus on, voit ladata pelin tai tehdä uuden käyttäjän
 if on_tallenne == True:
     print("-------------")
     while True:
@@ -45,6 +46,7 @@ print(f"Tervetuloa {kayttaja.nimi}")
 input()
 #Päävalikko
 while True:
+    valinta = ""
     if kayttaja.alaikainen == True:
          break
     try:
@@ -54,20 +56,21 @@ while True:
         input()
     if valinta == 1:
         taso(kayttaja, kayttaja.taso)
-
+#Voi tarkistaa pelin sisällä keräämäsi esineet. Voi kerätä enemmän kuin yhden samanlaisen
     elif valinta == 2:
         print("Varastossasi on: ")
         for i in kayttaja.esineet:
             print(f"- {i.nimi}")
         input()
-
+#Tulostaa ohjeet
     elif valinta == 3:
         with open("peliprojekti/paketti/ohjeet.txt", "r", encoding="utf-8") as ohjeet:
             print(f"\n{ohjeet.read()}")
-
+#Tallentaa pelin
     elif valinta == 4:
         tallenna_peli(kayttaja)
         input()
+#Lopettaa pelin ja kysyy haluatko tallentaa
     elif valinta == 5:
         valinta = input("Tallennetaanko eteneminen? k/e: ")
         if valinta == "k":
