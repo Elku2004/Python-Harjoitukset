@@ -20,14 +20,14 @@ def valitse_alku(x, num):
 
 #Viimeistä tasoa varten huono lopetus. Jos teet virheen 5 kertaa, peli katkeaa
 def oveen_paukutus(kiire: int):
-    if kiire > 4:
+    if kiire > 6:
         print("Kalju mies juoksee ovesta läpi kaiken paukuttamisen jälkeen ja vie sinut mukanaan\n" \
               "Sinun päähäsi laitetaan huppu etkä tiedä mihin olet matkalla\n"
               "Perillä, sinun muistisi pyyhitään, etkä muista enää koko päiväsi tapahtumia...")
         print("The End")
         exit()
     kiire += 1
-    print("Paukutus jatkuu...")
+    print(f"Paukutus jatkuu... {7-kiire} jäljellä...")
     return kiire
 
 #Pelissä on 3 tasoa
@@ -199,8 +199,12 @@ def taso_3(kayttaja):
                         print("Kuulostaa siltä että joku avasi oven!")
                         kutsu = True
                         input()
+                        kiire = oveen_paukutus(kiire)
+                        input
                 if valint == 3: 
                     print("Löydät pöydän takaa megafonin! Voisit varmaan käyttää sitä...")
+                    input()
+                    kiire = oveen_paukutus(kiire)
                     input()
                     Megafoni = True
             print("Juokset ovesta ulos ja Pekka juoksee taas sisälle\n" \

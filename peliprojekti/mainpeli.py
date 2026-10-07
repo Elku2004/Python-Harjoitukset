@@ -2,8 +2,6 @@ from paketti import Pelaaja, tallenna_peli, lataa_tallenne, aloita_luonti, luo_k
 
 import os
 import json
-import time
-import random
 
 #Onko tallennus jo olemassa
 for i in range(1, 11):
